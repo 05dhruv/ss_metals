@@ -19,7 +19,7 @@ const SLIDES = [
       href: '/products',
       cls: 'btn btn-accent btn-lg',
       icon: 'fa-solid fa-utensils',
-      label: 'Explore 100+ Products',
+      label: 'Explore Products',
       isExternal: false,
     },
     btn2: {
