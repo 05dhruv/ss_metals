@@ -56,7 +56,12 @@ export default function CompanyProfilePage() {
 
             <div data-aos="fade-left">
               <div className="about-media-card">
-                <img src="/img/infrastructure/infra-plant-2.jpg" alt="SS Metals Plant" />
+                <img
+                  src="/img/infrastructure/infra-plant-2.jpg"
+                  alt="SS Metals Plant"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className="about-floating-badge">
                   <div className="num">2000</div>
                   <div className="lbl">Year of Establishment</div>
@@ -91,7 +96,7 @@ export default function CompanyProfilePage() {
               style={{ flexDirection: 'column', textAlign: 'center', padding: '36px 24px' }}
             >
               <div className="credential-img" style={{ width: '80px', height: '80px', marginBottom: '12px' }}>
-                <img src="/img/badges/since2000.png" alt="Since 2000" />
+                <img src="/img/badges/since2000.png" alt="Since 2000" loading="lazy" decoding="async" />
               </div>
               <h3>Since 2000 Heritage</h3>
               <p>
@@ -107,7 +112,7 @@ export default function CompanyProfilePage() {
               style={{ flexDirection: 'column', textAlign: 'center', padding: '36px 24px' }}
             >
               <div className="credential-img" style={{ width: '80px', height: '80px', marginBottom: '12px' }}>
-                <img src="/img/badges/iso.png" alt="ISO Quality" />
+                <img src="/img/badges/iso.png" alt="ISO Quality" loading="lazy" decoding="async" />
               </div>
               <h3>ISO Quality Standards</h3>
               <p>
@@ -123,7 +128,7 @@ export default function CompanyProfilePage() {
               style={{ flexDirection: 'column', textAlign: 'center', padding: '36px 24px' }}
             >
               <div className="credential-img" style={{ width: '80px', height: '80px', marginBottom: '12px' }}>
-                <img src="/img/badges/exportquality.png" alt="Export Focus" />
+                <img src="/img/badges/exportquality.png" alt="Export Focus" loading="lazy" decoding="async" />
               </div>
               <h3>Export Customization</h3>
               <p>
@@ -185,7 +190,12 @@ export default function CompanyProfilePage() {
 
             <div data-aos="fade-left">
               <div className="about-media-card">
-                <img src="/img/infrastructure/infra-stacking.jpg" alt="Stainless Steel Storage" />
+                <img
+                  src="/img/infrastructure/infra-stacking.jpg"
+                  alt="Stainless Steel Storage"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className="about-floating-badge" style={{ background: 'rgba(217, 119, 6, 0.95)' }}>
                   <div className="num" style={{ color: '#ffffff' }}>
                     100%

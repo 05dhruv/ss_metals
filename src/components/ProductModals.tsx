@@ -154,6 +154,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
               id="lightboxImg"
               src={activeLightbox.src}
               alt={activeLightbox.caption}
+              decoding="async"
               style={{
                 maxHeight: '80vh',
                 width: 'auto',

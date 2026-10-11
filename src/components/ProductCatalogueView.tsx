@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useModals } from './ProductModals';
 import ProductImagePlaceholder from './ProductImagePlaceholder';
@@ -21,23 +22,26 @@ const CATEGORIES = [
 
 export default function ProductCatalogueView({ initialCategory }: { initialCategory?: string }) {
   const { openProduct } = useModals();
-  const [selectedCat, setSelectedCat] = useState(initialCategory || 'all');
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get('category');
+  const [selectedCat, setSelectedCat] = useState(initialCategory || categoryParam || 'all');
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    if (initialCategory) {
+    const raw = categoryParam || initialCategory;
+    if (raw) {
       // Normalize friendly query names
-      if (initialCategory === 'Kalvat Pots') {
+      if (raw === 'Kalvat Pots') {
         setSelectedCat('Kalvat Pots & Utensils');
-      } else if (initialCategory === 'Barware & Bathware') {
+      } else if (raw === 'Barware & Bathware' || raw === 'Barware') {
         setSelectedCat('Barware');
       } else {
-        setSelectedCat(initialCategory);
+        setSelectedCat(raw);
       }
     } else {
       setSelectedCat('all');
     }
-  }, [initialCategory]);
+  }, [categoryParam, initialCategory]);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();

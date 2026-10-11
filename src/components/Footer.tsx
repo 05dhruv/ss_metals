@@ -19,6 +19,10 @@ export default function Footer() {
                 <img
                   src="/img/logo/logo.png"
                   alt="SS Metals Logo"
+                  width={180}
+                  height={40}
+                  loading="lazy"
+                  decoding="async"
                   style={{ height: '40px', width: 'auto' }}
                 />
               </div>

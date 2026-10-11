@@ -2,13 +2,34 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [prodDropdownOpen, setProdDropdownOpen] = useState(false);
   const [supplierDropdownOpen, setSupplierDropdownOpen] = useState(false);
+
+  // Auto-close mobile navigation drawer on any page change
+  useEffect(() => {
+    setMobileOpen(false);
+    setProdDropdownOpen(false);
+    setSupplierDropdownOpen(false);
+  }, [pathname]);
+
+  const closeMobile = () => {
+    setMobileOpen(false);
+    setProdDropdownOpen(false);
+    setSupplierDropdownOpen(false);
+  };
+
+  const handleDropdownHover = (type: 'prod' | 'supplier', open: boolean) => {
+    // Only handle mouse hover on desktop screens (> 1024px)
+    if (typeof window !== 'undefined' && window.innerWidth > 1024) {
+      if (type === 'prod') setProdDropdownOpen(open);
+      if (type === 'supplier') setSupplierDropdownOpen(open);
+    }
+  };
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
@@ -45,8 +66,15 @@ export default function Header() {
       {/* Main Header */}
       <header className="site-header">
         <div className="container-fluid header-inner">
-          <Link href="/" className="brand-logo" onClick={() => setMobileOpen(false)}>
-            <img src="/img/logo/logo.png" alt="SS Metals Logo" />
+          <Link href="/" className="brand-logo" onClick={closeMobile}>
+            <img
+              src="/img/logo/logo.png"
+              alt="SS Metals Logo"
+              width={180}
+              height={42}
+              loading="eager"
+              decoding="async"
+            />
           </Link>
 
           <nav>
@@ -55,7 +83,7 @@ export default function Header() {
                 <Link
                   href="/"
                   className={`nav-link ${isActive('/') ? 'active' : ''}`}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobile}
                 >
                   Home
                 </Link>
@@ -64,15 +92,17 @@ export default function Header() {
                 <Link
                   href="/company-profile"
                   className={`nav-link ${isActive('/company-profile') ? 'active' : ''}`}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobile}
                 >
                   Company Profile
                 </Link>
               </li>
+
+              {/* Products Dropdown */}
               <li
                 className={`nav-item-dropdown ${prodDropdownOpen ? 'open' : ''}`}
-                onMouseEnter={() => setProdDropdownOpen(true)}
-                onMouseLeave={() => setProdDropdownOpen(false)}
+                onMouseEnter={() => handleDropdownHover('prod', true)}
+                onMouseLeave={() => handleDropdownHover('prod', false)}
               >
                 <button
                   type="button"
@@ -106,72 +136,52 @@ export default function Header() {
                   <Link
                     href="/products"
                     className="nav-dropdown-header-link"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setProdDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
-                    All products (catalogue)
+                    <span>All products (catalogue)</span>
+                    <i className="fa-solid fa-arrow-right" style={{ fontSize: '0.75rem' }}></i>
                   </Link>
                   <Link
                     href="/products?category=Ice+Buckets"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setProdDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
-                    Ice Buckets & Chillers
+                    Ice Buckets &amp; Chillers
                   </Link>
                   <Link
                     href="/products?category=Mugs+%26+Tapers"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setProdDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
-                    Tapers & Mugs
+                    Tapers &amp; Mugs
                   </Link>
                   <Link
                     href="/products?category=Water+Jugs"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setProdDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Water Jugs
                   </Link>
                   <Link
                     href="/products?category=Cutlery+Holders"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setProdDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Cutlery Holders
                   </Link>
                   <Link
                     href="/products?category=Kalvat+Pots"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setProdDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Kalvat Pots
                   </Link>
                   <Link
                     href="/products?category=Barware"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setProdDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
-                    Barware & Bathware
+                    Barware &amp; Bathware
                   </Link>
                 </div>
               </li>
@@ -179,8 +189,8 @@ export default function Header() {
               {/* Supplier Dropdown */}
               <li
                 className={`nav-item-dropdown ${supplierDropdownOpen ? 'open' : ''}`}
-                onMouseEnter={() => setSupplierDropdownOpen(true)}
-                onMouseLeave={() => setSupplierDropdownOpen(false)}
+                onMouseEnter={() => handleDropdownHover('supplier', true)}
+                onMouseLeave={() => handleDropdownHover('supplier', false)}
               >
                 <button
                   type="button"
@@ -214,80 +224,57 @@ export default function Header() {
                   <Link
                     href="/supplier"
                     className="nav-dropdown-header-link"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setSupplierDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
-                    All supplier lines
+                    <span>All supplier lines</span>
+                    <i className="fa-solid fa-arrow-right" style={{ fontSize: '0.75rem' }}></i>
                   </Link>
                   <Link
                     href="/supplier/coil"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setSupplierDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Steel Coil
                   </Link>
                   <Link
                     href="/supplier/sheet"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setSupplierDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Sheet
                   </Link>
                   <Link
                     href="/supplier/circle"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setSupplierDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Circle
                   </Link>
                   <Link
                     href="/supplier/blank"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setSupplierDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Blank
                   </Link>
                   <Link
                     href="/supplier/wire"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setSupplierDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Wire
                   </Link>
                   <Link
                     href="/supplier/rod"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setSupplierDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Rod
                   </Link>
                   <Link
                     href="/supplier/pipe"
                     className="nav-dropdown-item"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setSupplierDropdownOpen(false);
-                    }}
+                    onClick={closeMobile}
                   >
                     Pipe
                   </Link>
@@ -298,7 +285,7 @@ export default function Header() {
                 <Link
                   href="/ready-stock"
                   className={`nav-link ${isActive('/ready-stock') ? 'active' : ''}`}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobile}
                 >
                   Ready Stock
                 </Link>
@@ -307,7 +294,7 @@ export default function Header() {
                 <Link
                   href="/infrastructure"
                   className={`nav-link ${isActive('/infrastructure') ? 'active' : ''}`}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobile}
                 >
                   Infrastructure
                 </Link>
@@ -316,9 +303,9 @@ export default function Header() {
                 <Link
                   href="/contact"
                   className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobile}
                 >
-                  Enquiry & Contact
+                  Enquiry &amp; Contact
                 </Link>
               </li>
             </ul>

@@ -64,7 +64,7 @@ export default function HomePage() {
           <div className="credentials-grid">
             <div className="credential-card" data-aos="fade-up" data-aos-delay="100">
               <div className="credential-img">
-                <img src="/img/badges/since2000.png" alt="Since 2000 Badge" />
+                <img src="/img/badges/since2000.png" alt="Since 2000 Badge" loading="lazy" decoding="async" />
               </div>
               <div className="credential-info">
                 <h3>Since 2000</h3>
@@ -74,7 +74,7 @@ export default function HomePage() {
 
             <div className="credential-card" data-aos="fade-up" data-aos-delay="200">
               <div className="credential-img">
-                <img src="/img/badges/iso.png" alt="ISO Certified" />
+                <img src="/img/badges/iso.png" alt="ISO Certified" loading="lazy" decoding="async" />
               </div>
               <div className="credential-info">
                 <h3>ISO Certified</h3>
@@ -84,7 +84,7 @@ export default function HomePage() {
 
             <div className="credential-card" data-aos="fade-up" data-aos-delay="300">
               <div className="credential-img">
-                <img src="/img/badges/exportquality.png" alt="Export Quality" />
+                <img src="/img/badges/exportquality.png" alt="Export Quality" loading="lazy" decoding="async" />
               </div>
               <div className="credential-info">
                 <h3>Export Quality</h3>
@@ -147,7 +147,12 @@ export default function HomePage() {
 
             <div data-aos="fade-left">
               <div className="about-media-card">
-                <img src="/img/infrastructure/infra-plant-1.jpg" alt="SS Metals Factory Floor" />
+                <img
+                  src="/img/infrastructure/infra-plant-1.jpg"
+                  alt="SS Metals Factory Floor"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className="about-floating-badge">
                   <div className="num">35K+</div>
                   <div className="lbl">Pieces Produced Daily</div>

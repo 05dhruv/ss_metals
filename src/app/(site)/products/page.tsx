@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import ProductCatalogueView from '@/components/ProductCatalogueView';
 
@@ -31,7 +32,9 @@ export default function ProductsPage({ searchParams }: { searchParams?: { catego
       {/* Catalog Main */}
       <section style={{ padding: '40px 0 90px', background: 'var(--bg-light)' }}>
         <div className="container">
-          <ProductCatalogueView initialCategory={category} />
+          <Suspense fallback={<div style={{ textAlign: 'center', padding: '60px 0', color: '#64748b' }}>Loading products catalogue...</div>}>
+            <ProductCatalogueView initialCategory={category} />
+          </Suspense>
         </div>
       </section>
     </>

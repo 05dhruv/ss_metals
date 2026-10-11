@@ -48,6 +48,7 @@ export default function ProductImagePlaceholder({
           src={src as string}
           alt={alt}
           loading="lazy"
+          decoding="async"
           onError={() => setImgError(true)}
           style={{
             width: '100%',
