@@ -1,0 +1,172 @@
+[
+  {
+    "id": "575",
+    "code": "SMI 16",
+    "slug": "smi-16",
+    "name": "MULE MUG",
+    "category": "Mugs & Tapers",
+    "stock": "\\r\\n4100 pcs\\r\\n",
+    "image": "img/products/smi-16.jpg",
+    "specs": {
+      "Weight": "156 gm",
+      "Height": "104 mm",
+      "Base Die": "60 mm",
+      "Upper Die": "88 mm"
+    },
+    "specs_raw": [
+      "Weight\t-\t156 gm",
+      "Height\t-\t104 mm",
+      "Base Die-\t60 mm",
+      "Upper Die-\t88 mm"
+    ]
+  },
+  {
+    "id": "545",
+    "code": "SMI 1",
+    "slug": "smi-1",
+    "name": "TAPER SMALL ICE BUCKET",
+    "category": "Ice Buckets",
+    "stock": "\\r\\n 00 sets\\r\\n",
+    "image": "img/products/smi-1.jpg",
+    "specs": {
+      "Weight": "850 gm",
+      "Height": "162 mm",
+      "Base Die": "115 mm",
+      "Upper Die": "163 mm"
+    },
+    "specs_raw": [
+      "Weight - 850 gm",
+      "Height - 162 mm",
+      "Base Die- 115 mm",
+      "Upper Die- 163 mm"
+    ]
+  },
+  {
+    "id": "585",
+    "code": "SMI 20",
+    "slug": "smi-20",
+    "name": "TEA POT",
+    "category": "Kalvat Pots & Utensils",
+    "stock": "\\r\\n00 pcs\\r\\n",
+    "image": "img/products/smi-20.jpg",
+    "specs": {
+      "Weight": "144 gm",
+      "Height": "91 mm",
+      "Base Die": "100 mm",
+      "Upper Die": "107 mm"
+    },
+    "specs_raw": [
+      "Weight\t-\t144 gm",
+      "Height\t-\t91 mm",
+      "Base Die-\t100 mm",
+      "Upper Die-      107 mm"
+    ]
+  },
+  {
+    "id": "611",
+    "code": "SMI 33",
+    "slug": "smi-33",
+    "name": "Measuring Cup Big",
+    "category": "Stainless Steel Utensils",
+    "stock": "\\r\\n00 pcs\\r\\n",
+    "image": "img/products/smi-33.jpg",
+    "specs": {
+      "Weight": "78 gm",
+      "Height": "32 mm",
+      "Base Die": "72 mm",
+      "Upper Die": "72 mm"
+    },
+    "specs_raw": [
+      "Weight\t-\t78 gm",
+      "Height\t-\t32 mm",
+      "Base Die-\t72 mm",
+      "Upper Die-\t72 mm"
+    ]
+  },
+  {
+    "id": "625",
+    "code": "SMI 40",
+    "slug": "smi-40",
+    "name": "CANISTER SETS",
+    "category": "Milk Cans",
+    "stock": "\\r\\n900 pcs\\r\\n",
+    "image": "img/products/smi-40.jpg",
+    "specs": {
+      "Weight": "795 gm",
+      "Height": "205 mm",
+      "Base Die": "194 mm",
+      "Upper Die": "202 mm"
+    },
+    "specs_raw": [
+      "Weight\t-\t795 gm",
+      "Height\t-\t205 mm",
+      "Base Die-\t194 mm",
+      "Upper Die-\t202 mm"
+    ]
+  },
+  {
+    "id": "645",
+    "code": "SMI 50",
+    "slug": "smi-50",
+    "name": "BIG CHIP CUP",
+    "category": "Stainless Steel Utensils",
+    "stock": "\\r\\n1200 pcs\\r\\n",
+    "image": "img/products/smi-50.jpg",
+    "specs": {
+      "Weight": "159 gm",
+      "Height": "120 mm",
+      "Base Die": "78 mm",
+      "Upper Die": "95 mm"
+    },
+    "specs_raw": [
+      "Weight\t-\t159 gm",
+      "Height\t-\t120 mm",
+      "Base Die-\t78 mm",
+      "Upper Die-\t95 mm"
+    ]
+  },
+  {
+    "id": "667",
+    "code": "SMI 60",
+    "slug": "smi-60",
+    "name": "CHAMPANGE BUCKET",
+    "category": "Ice Buckets",
+    "stock": "\\r\\n00 pcs\\r\\n",
+    "image": "img/products/smi-60.jpg",
+    "specs": {
+      "Detail_1": "SINGLE WALL",
+      "Weight": "400 gm",
+      "Height": "216 mm",
+      "Base Die": "153 mm",
+      "Upper Die": "196 mm"
+    },
+    "specs_raw": [
+      "SINGLE WALL",
+      "Weight\t-\t400 gm",
+      "Height\t-\t216 mm",
+      "Base Die-\t153 mm",
+      "Upper Die-\t196 mm"
+    ]
+  },
+  {
+    "id": "687",
+    "code": "SMI 70",
+    "slug": "smi-70",
+    "name": "CANISTOR TAPER SMALL",
+    "category": "Mugs & Tapers",
+    "stock": "\\r\\n00 pcs\\r\\n",
+    "image": "img/products/smi-70.jpg",
+    "specs": {
+      "Weight": "653 gm",
+      "Height": "164 mm",
+      "Base Die": "156 mm",
+      "Upper Die": "182 mm"
+    },
+    "specs_raw": [
+      "Weight\t-\t653 gm",
+      "Height\t-\t164 mm",
+      "Base Die-\t156 mm",
+      "Upper Die-\t182 mm"
+    ]
+  }
+]
