@@ -247,7 +247,7 @@ export default function PopularProductsSection() {
 
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
           <Link href="/products" className="btn btn-primary btn-lg">
-            <i className="fa-solid fa-border-all"></i> View All 103 Products in Catalogue
+            <i className="fa-solid fa-border-all"></i> View More
           </Link>
         </div>
       </div>
