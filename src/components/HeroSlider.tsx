@@ -123,8 +123,11 @@ export default function HeroSlider() {
         <div
           key={i}
           className={`hero-slide ${i === current ? 'active' : ''}`}
-          style={{ backgroundImage: `url('${slide.bg}')` }}
         >
+          <div
+            className="hero-slide-bg"
+            style={{ backgroundImage: `url('${slide.bg}')` }}
+          />
           <div className="hero-overlay"></div>
           <div className="container" style={{ width: '100%', position: 'relative', zIndex: 2 }}>
             <div className="hero-content" style={{ textAlign: 'left', marginLeft: 0, marginRight: 'auto' }}>

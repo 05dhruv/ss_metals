@@ -23,18 +23,20 @@ export default function Header() {
           <div className="top-left">
             <span className="top-item">
               <i className="fa-solid fa-phone"></i>{' '}
-              <a href="tel:+919412236335">+91 9412236335</a> /{' '}
-              <a href="tel:+919458771652">9458771652</a>
+              <a href="tel:+919412236335">+91 9412236335</a>
+              <span className="top-phone-alt"> / <a href="tel:+919458771652">9458771652</a></span>
             </span>
           </div>
 
           <div className="top-right">
-            <span className="top-item">
+            <span className="top-item top-email-item">
               <i className="fa-solid fa-envelope"></i>{' '}
               <a href="mailto:ssmetals2000@gmail.com">ssmetals2000@gmail.com</a>
             </span>
-            <span className="top-item">
-              <i className="fa-solid fa-location-dot"></i> 19, Chitraguptnagar, Katghar, Moradabad, UP
+            <span className="top-item top-address-item">
+              <i className="fa-solid fa-location-dot"></i>{' '}
+              <span className="top-address-full">19, Chitraguptnagar, Katghar, Moradabad, UP</span>
+              <span className="top-address-short">Moradabad, UP</span>
             </span>
           </div>
         </div>
