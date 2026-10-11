@@ -2216,7 +2216,10 @@ textarea.form-control {
   .site-header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1010;
+    background: #ffffff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
   .header-inner {
     padding: 10px 0;
@@ -2236,7 +2239,7 @@ textarea.form-control {
     background: #ffffff;
     flex-direction: column;
     padding: 20px 20px 50px;
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     display: none;
     border-top: 1px solid var(--steel-border);
     border-bottom: 2px solid var(--primary);
@@ -2245,16 +2248,14 @@ textarea.form-control {
     max-height: calc(100dvh - 62px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    z-index: 1001;
+    z-index: 1012;
   }
   .nav-menu.show { display: flex; }
   .mobile-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(10, 37, 64, 0.5);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 1000;
+    background: rgba(10, 37, 64, 0.45);
+    z-index: 1005;
   }
   .nav-link {
     width: 100%;
