@@ -35,7 +35,7 @@ export default function SupplierPage() {
           </span>
           <h1
             style={{
-              fontSize: '2.8rem',
+              fontSize: 'clamp(1.85rem, 5vw, 2.8rem)',
               fontWeight: 800,
               color: '#ffffff',
               letterSpacing: '-0.5px',
@@ -46,7 +46,7 @@ export default function SupplierPage() {
           </h1>
           <p
             style={{
-              fontSize: '1.15rem',
+              fontSize: 'clamp(0.95rem, 2.5vw, 1.15rem)',
               color: '#cbd5e1',
               maxWidth: '680px',
               lineHeight: 1.6,
@@ -88,8 +88,8 @@ export default function SupplierPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-              gap: '26px',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
+              gap: '24px',
             }}
           >
             {SUPPLIER_LINES.map((line, idx) => (

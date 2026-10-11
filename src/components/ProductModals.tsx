@@ -70,7 +70,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
               height={220}
             />
 
-            <div style={{ padding: '32px 30px' }}>
+            <div className="modal-body-content" style={{ padding: '24px 20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', flexWrap: 'wrap', marginBottom: '16px', paddingRight: '40px' }}>
                 <span className="modal-code" id="modalProductCode" style={{ fontSize: '0.95rem' }}>
                   {activeProduct.code}
@@ -80,7 +80,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
                 </span>
               </div>
 
-              <h2 id="modalProductTitle" style={{ fontSize: '1.65rem', color: 'var(--primary)', marginBottom: '4px' }}>
+              <h2 id="modalProductTitle" style={{ fontSize: 'clamp(1.3rem, 4vw, 1.65rem)', color: 'var(--primary)', marginBottom: '4px' }}>
                 {activeProduct.name}
               </h2>
               <p className="product-cat" id="modalProductCat" style={{ marginBottom: '18px', display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -119,11 +119,11 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
                   target="_blank"
                   rel="noopener"
                   className="btn btn-whatsapp"
-                  style={{ flex: 1, justifyContent: 'center' }}
+                  style={{ flex: 1, minWidth: '160px', justifyContent: 'center' }}
                 >
                   <i className="fa-brands fa-whatsapp"></i> Inquire on WhatsApp
                 </a>
-                <a href="/contact" className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }}>
+                <a href="/contact" className="btn btn-primary" style={{ flex: 1, minWidth: '160px', justifyContent: 'center' }}>
                   <i className="fa-solid fa-envelope"></i> Request Quotation
                 </a>
               </div>
@@ -145,7 +145,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
             <button
               className="modal-close-btn"
               id="lightboxClose"
-              style={{ top: '-45px', right: 0, background: '#ffffff' }}
+              style={{ top: '12px', right: '12px', background: 'rgba(255, 255, 255, 0.95)', boxShadow: '0 2px 10px rgba(0,0,0,0.3)', zIndex: 10 }}
               onClick={closeLightbox}
             >
               &times;

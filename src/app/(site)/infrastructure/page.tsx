@@ -15,13 +15,13 @@ export default function InfrastructurePage() {
         style={{
           background: 'linear-gradient(135deg, #061729 0%, #0a2540 60%, #123456 100%)',
           color: '#ffffff',
-          padding: '80px 0 65px',
+          padding: 'clamp(40px, 8vw, 80px) 0 clamp(35px, 6vw, 65px)',
         }}
       >
         <div className="container" data-aos="fade-up">
           <h1
             style={{
-              fontSize: '3.1rem',
+              fontSize: 'clamp(1.85rem, 5vw, 3.1rem)',
               fontWeight: 800,
               color: '#ffffff',
               letterSpacing: '-0.8px',
@@ -32,7 +32,7 @@ export default function InfrastructurePage() {
           </h1>
           <p
             style={{
-              fontSize: '1.2rem',
+              fontSize: 'clamp(0.95rem, 2.5vw, 1.2rem)',
               color: '#cbd5e1',
               maxWidth: '720px',
               lineHeight: 1.6,

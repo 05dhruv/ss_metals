@@ -323,6 +323,14 @@ export default function Header() {
           </div>
         </div>
       </header>
+
+      {mobileOpen && (
+        <div
+          className="mobile-backdrop"
+          onClick={() => setMobileOpen(false)}
+          aria-hidden="true"
+        />
+      )}
     </>
   );
 }

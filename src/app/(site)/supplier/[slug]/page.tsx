@@ -65,7 +65,7 @@ export default function SupplierLinePage({ params }: SupplierLinePageProps) {
 
           <h1
             style={{
-              fontSize: '2.8rem',
+              fontSize: 'clamp(1.85rem, 5vw, 2.8rem)',
               fontWeight: 800,
               color: '#ffffff',
               letterSpacing: '-0.5px',
@@ -344,7 +344,7 @@ export default function SupplierLinePage({ params }: SupplierLinePageProps) {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 260px), 1fr))',
                   gap: '20px',
                 }}
               >

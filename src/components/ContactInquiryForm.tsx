@@ -79,13 +79,13 @@ export default function ContactInquiryForm({ defaultProduct }: { defaultProduct?
   };
 
   return (
-    <div className="inquiry-form-card" style={{ background: '#ffffff', borderRadius: '16px', boxShadow: '0 12px 40px rgba(10,37,64,0.08)', padding: '36px' }}>
+    <div className="inquiry-form-card" style={{ background: '#ffffff', borderRadius: '16px', boxShadow: '0 12px 40px rgba(10,37,64,0.08)' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px', marginBottom: '24px' }}>
         <div>
           <span className="section-kicker" style={{ color: 'var(--accent)', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', fontSize: '0.85rem' }}>
             Direct Factory Quotation
           </span>
-          <h2 style={{ fontSize: '2.1rem', fontWeight: 800, color: 'var(--primary)', margin: '4px 0 8px', letterSpacing: '-0.5px' }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.1rem)', fontWeight: 800, color: 'var(--primary)', margin: '4px 0 8px', letterSpacing: '-0.5px' }}>
             Request a Price Quotation
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.96rem', margin: 0 }}>
@@ -99,7 +99,7 @@ export default function ContactInquiryForm({ defaultProduct }: { defaultProduct?
       </div>
 
       {sent ? (
-        <div style={{ background: '#ecfdf5', border: '1px solid #10b981', padding: '36px 28px', borderRadius: '16px', textAlign: 'center' }}>
+        <div style={{ background: '#ecfdf5', border: '1px solid #10b981', padding: '36px 20px', borderRadius: '16px', textAlign: 'center' }}>
           <div style={{ width: '64px', height: '64px', background: '#10b981', color: '#ffffff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', fontSize: '1.8rem' }}>
             <i className="fa-solid fa-check"></i>
           </div>
@@ -144,7 +144,7 @@ export default function ContactInquiryForm({ defaultProduct }: { defaultProduct?
             <label style={{ display: 'block', fontWeight: 700, fontSize: '0.9rem', color: 'var(--primary)', marginBottom: '10px' }}>
               1. Select Product Category:
             </label>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))', gap: '10px' }}>
               {CATEGORIES.map((cat) => {
                 const active = selectedCategory === cat.label;
                 return (
@@ -177,7 +177,7 @@ export default function ContactInquiryForm({ defaultProduct }: { defaultProduct?
           </div>
 
           {/* Step 2: Steel Grade & Volume Selector */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginBottom: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '20px', marginBottom: '24px' }}>
             <div>
               <label style={{ display: 'block', fontWeight: 700, fontSize: '0.9rem', color: 'var(--primary)', marginBottom: '8px' }}>
                 2. Stainless Steel Grade:
@@ -242,7 +242,7 @@ export default function ContactInquiryForm({ defaultProduct }: { defaultProduct?
           </div>
 
           {/* Step 3: Contact Coordinates */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '16px', marginBottom: '16px' }}>
             <div className="form-group" style={{ margin: 0 }}>
               <label style={{ fontWeight: 600, fontSize: '0.88rem', color: 'var(--primary)' }}>Your Name *</label>
               <div style={{ position: 'relative' }}>

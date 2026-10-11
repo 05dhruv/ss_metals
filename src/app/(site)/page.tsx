@@ -171,7 +171,7 @@ export default function HomePage() {
       <section
         data-aos="zoom-in"
         style={{
-          padding: '80px 0',
+          padding: 'clamp(45px, 7vw, 80px) 0',
           background: 'linear-gradient(135deg, #061729 0%, #0a2540 50%, #163e69 100%)',
           color: '#ffffff',
           textAlign: 'center',
@@ -197,10 +197,10 @@ export default function HomePage() {
           >
             Direct Factory Partnership
           </span>
-          <h2 style={{ color: '#ffffff', fontSize: '2.5rem', fontWeight: 800, marginBottom: '16px', letterSpacing: '-0.5px' }}>
+          <h2 style={{ color: '#ffffff', fontSize: 'clamp(1.65rem, 4.5vw, 2.5rem)', fontWeight: 800, marginBottom: '16px', letterSpacing: '-0.5px' }}>
             Partner with India&apos;s Leading Kalvat Manufacturer
           </h2>
-          <p style={{ color: '#cbd5e1', fontSize: '1.1rem', marginBottom: '32px', lineHeight: 1.7 }}>
+          <p style={{ color: '#cbd5e1', fontSize: 'clamp(0.92rem, 2vw, 1.1rem)', marginBottom: '32px', lineHeight: 1.7 }}>
             Whether you need custom-dimension unfinished utensils, ready stock fast dispatch, or raw steel coils,
             seamless pipes and circles, our sales desk is ready to assist your business.
           </p>
