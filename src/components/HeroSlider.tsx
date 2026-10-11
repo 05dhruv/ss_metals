@@ -117,18 +117,43 @@ export default function HeroSlider() {
     };
   }, [resetAutoplay]);
 
+  const touchStartX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diffX = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diffX) > 40) {
+      if (diffX > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    touchStartX.current = null;
+  };
+
   return (
-    <section className="hero-slider-wrap">
+    <section
+      className="hero-slider-wrap"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       {SLIDES.map((slide, i) => (
         <div
           key={i}
           className={`hero-slide ${i === current ? 'active' : ''}`}
         >
-          <div
-            className="hero-slide-bg"
-            style={{ backgroundImage: `url('${slide.bg}')` }}
-          />
-          <div className="hero-overlay"></div>
+          <div className="hero-slide-media">
+            <div
+              className="hero-slide-bg"
+              style={{ backgroundImage: `url('${slide.bg}')` }}
+            />
+            <div className="hero-overlay"></div>
+          </div>
           <div className="container" style={{ width: '100%', position: 'relative', zIndex: 2 }}>
             <div className="hero-content" style={{ textAlign: 'left', marginLeft: 0, marginRight: 'auto' }}>
               <span className="hero-tag">

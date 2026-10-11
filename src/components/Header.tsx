@@ -74,22 +74,33 @@ export default function Header() {
                 onMouseEnter={() => setProdDropdownOpen(true)}
                 onMouseLeave={() => setProdDropdownOpen(false)}
               >
-                <div
+                <button
+                  type="button"
                   className={`nav-link nav-dropdown-toggle ${isActive('/products') ? 'active' : ''}`}
-                  onClick={() => setProdDropdownOpen(!prodDropdownOpen)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setProdDropdownOpen(!prodDropdownOpen);
+                  }}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    font: 'inherit',
+                    color: 'inherit',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    width: '100%',
+                    textAlign: 'left',
+                  }}
+                  aria-expanded={prodDropdownOpen}
                 >
-                  <Link
-                    href="/products"
-                    onClick={() => setMobileOpen(false)}
-                    style={{ color: 'inherit', textDecoration: 'none' }}
-                  >
-                    Products
-                  </Link>
+                  <span>Products</span>
                   <i
                     className={`fa-solid ${prodDropdownOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}
-                    style={{ fontSize: '0.7rem', marginLeft: '3px' }}
+                    style={{ fontSize: '0.75rem', marginLeft: '6px' }}
                   ></i>
-                </div>
+                </button>
 
                 <div className={`nav-dropdown-menu ${prodDropdownOpen ? 'show' : ''}`}>
                   <Link
@@ -171,22 +182,33 @@ export default function Header() {
                 onMouseEnter={() => setSupplierDropdownOpen(true)}
                 onMouseLeave={() => setSupplierDropdownOpen(false)}
               >
-                <div
+                <button
+                  type="button"
                   className={`nav-link nav-dropdown-toggle ${isActive('/supplier') ? 'active' : ''}`}
-                  onClick={() => setSupplierDropdownOpen(!supplierDropdownOpen)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSupplierDropdownOpen(!supplierDropdownOpen);
+                  }}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    font: 'inherit',
+                    color: 'inherit',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    width: '100%',
+                    textAlign: 'left',
+                  }}
+                  aria-expanded={supplierDropdownOpen}
                 >
-                  <Link
-                    href="/supplier"
-                    onClick={() => setMobileOpen(false)}
-                    style={{ color: 'inherit', textDecoration: 'none' }}
-                  >
-                    Supplier
-                  </Link>
+                  <span>Supplier</span>
                   <i
                     className={`fa-solid ${supplierDropdownOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}
-                    style={{ fontSize: '0.7rem', marginLeft: '3px' }}
+                    style={{ fontSize: '0.75rem', marginLeft: '6px' }}
                   ></i>
-                </div>
+                </button>
 
                 <div className={`nav-dropdown-menu ${supplierDropdownOpen ? 'show' : ''}`}>
                   <Link
